@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Assignment</title>
+
+
+    <!-- link the bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+
+</head>
+
+<!-- assignment 
+* using html, bootstrap and JS, create a single page website that contains the following
+1 - a bootstrap styled table representing your choice of data
+2 - a bootstrap styled form that allows a user to add a new row to the table when clicking submit 
+
+my plan - edit the week 9 assignment, my page1.html had a table in it, second: follow the video in week 10, to do app, video 5-->
+
+<body>
+    <!-- create body -->
+
+    <body class="bg-dark p-3 text-white">
+        <p>
+            Week 10: Coding Assignment</br>
+            Barrett Jesness
+        </p>
+
+
+        <!-- nav bar: https://getbootstrap.com/docs/5.2/components/navbar/#nav -->
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class=" container-fluid">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="index.html">Table</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- enter page date here *****************************************************************************************************-->
+
+        <!-- create form for user, following video mostly, slight changes-->
+        <div class="card">
+            <div class="card-body" style="width: 18rem">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="new-start-date">Start Date</label>
+                            <input type="date" class="form-control" id="new-start-date">
+                        </div> <!-- closes form group-->
+
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="new-end-date">End Date</label>
+                                <input type="date" class="form-control" id="new-end-date">
+                            </div> <!-- closes form group-->
+                        </div>
+                    </div> <!-- closes col small-->
+
+                </div> <!-- end row div-->
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="new-task">Task</label>
+                            <input type="text" class="form-control" id="new-task" placeholder="new task">
+                        </div> <!-- closes form group-->
+                    </div>
+                </div>
+
+                <!-- insert button -->
+                <button id="add" class="btn btn-primary form-control">Add Data</button>
+
+            </div> <!-- end card div-->
+
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-med-6">
+                        <table id="list" class="table table-dark table-striped table-hover m-3">
+                            <tr>
+                                <th scope="col">Task</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- link the jquery and bootstrap bundle-->
+            <script src="node_modules/jquery/dist/jquery.js"></script>
+            <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+            <script src="add_table_rows.js"></script>
+    </body>
+
+</html>
